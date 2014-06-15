@@ -1,9 +1,12 @@
+# SCSS Sourdough
 
-This SCSS Starter is inspired by <a href="https://smacss.com/book/" target="_blank">SMACSS</a> principles. 
 
-In general:
+This SCSS Starter is inspired by [SMACSS](https://smacss.com/book/) principles. 
 
-  *Section 1. contains mixins, placeholders and variables.
-  *Section 2. contains element resets.
-  *Section 3. contains reusable styles.
-  *Section 4. contains unique styles.
+###Overview
+
+  * Section 1. contains mixins, placeholders and variables.
+  * Section 2. contains element resets.
+  * Section 3. contains reusable styles.
+  * Section 4. contains unique styles.
+  * Master.scss imports all stylesheets.

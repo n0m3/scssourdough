@@ -1,0 +1,75 @@
+//__________________________________________________
+// Inputs
+//__________________________________________________
+
+// Input Types
+//________________________
+// input[type="text"], 
+// input[type="password"], 
+// input[type="date"], 
+// input[type="datetime"], 
+// input[type="datetime-local"], 
+// input[type="month"], 
+// input[type="week"], 
+// input[type="number"], 
+// input[type="search"], 
+// input[type="tel"], 
+// input[type="time"], 
+// input[type="url"],
+// input[type="email"], 
+// textarea 
+
+
+@mixin input-1($color, $bgcolor) {
+	-webkit-appearance: none;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+	&:focus {
+		background-color: $bgcolor;
+	  outline:none;
+	}
+
+	&::-webkit-input-placeholder {
+		color: $color;
+	}
+
+	&::-moz-placeholder {
+		color: $color;
+	}
+
+	&:-moz-placeholder {
+		color: $color;
+	}
+
+	&:-ms-input-placeholder {
+		color: $color;
+	}	
+}
+
+
+
+//__________________________________________________
+// Buttons
+//__________________________________________________
+
+.btn.st1 {
+	border-width: 1px;
+	border-style: solid;
+	@include radius(3px);
+
+	&:hover,
+	&:focus,
+	&:active {
+		color: $white;
+	}	
+}
+
+.btn.st2 {
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 38px;
+	text-transform: uppercase;
+	padding: 5px 18px;		
+}

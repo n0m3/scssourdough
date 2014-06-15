@@ -1,0 +1,116 @@
+//__________________________________________________
+// Helpful mixins and placeholders
+//__________________________________________________
+
+// Border radius
+@mixin radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+// Box shadow
+@mixin shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+// One transition
+@mixin transition($transition) {
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -o-transition: $transition; 
+  transition: $transition;  
+}
+
+// Two transitions
+@mixin transition2($transition, $transition2) {
+  -webkit-transition: $transition, $transition2;
+  -moz-transition: $transition, $transition2;
+  -o-transition: $transition, $transition2; 
+  transition: $transition, $transition2;  
+}
+
+// Multicolumn layouts
+@mixin multicolumn($number, $gap, $rule) {
+  -webkit-column-count: $number;
+  -webkit-column-gap: $gap; 
+  -webkit-column-rule: $rule;
+  -moz-column-count: $number;
+  -moz-column-gap: $gap;  
+  -moz-column-rule: $rule;
+  column-count: $number;
+  column-gap: $gap; 
+  column-rule: $rule;
+}
+
+// Clearfix for clearing floated elements
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+    clear:both;
+  }
+} 
+
+// Vertical align
+@mixin vertical-align() {
+  display: block;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);  
+}
+
+// Centered background image
+%img-as-bg {
+  z-index: -1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  min-height: 100%;
+  max-height: none;
+  height: auto;  
+  min-width: 100%;
+  max-width: none;
+  width: auto;
+}
+
+// Border box sizing keeps padding and border within box dimensions
+%border-box {
+  *, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }  
+}
+
+// Font smoothing for Webkit and FireFox 25
+%font-smooth {
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+// Hide text for image replacement
+%hide-text {
+  text-indent:-9999px;height:0;margin: 0;
+}
+
+// Fixes line-wrap issue on iOS
+%line-wrap {                  // Wrap long strings of text
+  white-space: pre !important;           /* CSS 2.0 */
+  white-space: pre-wrap !important;      /* CSS 2.1 */
+  white-space: pre-line !important;      /* CSS 3.0 */
+  white-space: -pre-wrap !important;     /* Opera 4-6 */
+  white-space: -o-pre-wrap !important;   /* Opera 7 */
+  white-space: -moz-pre-wrap !important; /* Mozilla */
+  white-space: -hp-pre-wrap !important;  /* HP Printers */
+  word-wrap: break-word !important;      /* IE 5+ */
+}

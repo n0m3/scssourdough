@@ -1,0 +1,34 @@
+//__________________________________________________
+// Overall Site Structure
+//__________________________________________________
+
+// Header
+.site-header {
+	padding: 20px 40px;
+	margin-bottom: 40px;
+	text-align: center;
+
+	.site-name {
+		@extend %hide-text;
+	}
+}
+
+// Footer
+$footer-height: 100px;
+
+ // Space for sticky footer after site main
+.site-main {
+	margin-bottom: ($footer-height+40px);
+}
+
+.site-footer {
+	padding: 20px 40px;
+	text-align: center;
+	
+	// Sticky footer
+	height: $footer-height;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}

@@ -1,0 +1,49 @@
+//__________________________________________________
+// Screen Breakpoints and Media Queries
+//__________________________________________________
+
+// Screen Ranges
+$screen: 			only screen;
+$small-lb: 		0em;
+$small-ub: 		40em;
+$medium-lb: 	40.063em;
+$medium-ub: 	64em;
+$large-lb: 		64.063em;
+$large-ub: 		90em;
+$xlarge-lb: 	90.063em;
+$xlarge-ub: 	120em;
+$xxlarge-lb: 	120.063em;
+
+// Small Screens
+$small-only: "#{$screen} and (max-width: #{$small-ub})";
+
+// Medium Screens
+$medium-up: "#{$screen} and (min-width:#{$medium-lb})";
+$medium-only: "#{$screen} and (min-width:#{$medium-lb}) and (max-width:#{$medium-ub})";
+$medium-down: "#{$screen} and (max-width:#{$medium-ub})";
+
+// Large Screens
+$large-up: "#{$screen} and (min-width:#{$large-lb})";
+$large-only: "#{$screen} and (min-width:#{$large-lb}) and (max-width:#{$large-ub})";
+$xlarge-up: "#{$screen} and (min-width:#{$xlarge-lb})";
+$xlarge-only: "#{$screen} and (min-width:#{$xlarge-lb}) and (max-width:#{$xlarge-ub})";
+$xxlarge-up: "#{$screen} and (min-width:#{$xxlarge-lb})";
+$xxlarge-up: "#{$screen} and (min-width:#{$xxlarge-lb})";
+
+// Retina Screens
+$retina-screen:       "#{$screen} and (-webkit-min-device-pixel-ratio: 2),
+                      #{$screen} and (min--moz-device-pixel-ratio: 2),
+                      #{$screen} and (-moz-min-device-pixel-ratio: 2),
+                      #{$screen} and (-o-min-device-pixel-ratio: 2/1),
+                      #{$screen} and (min-device-pixel-ratio: 2),
+                      #{$screen} and (min-resolution: 192dpi),
+                      #{$screen} and (min-resolution: 2dppx)";
+
+// Topbar Breakpoint
+$topbar-breakpoint: #{$medium-ub}; 
+$small-topbar-only: "#{$screen} and (max-width: #{$medium-ub})";
+$large-topbar-only: "#{$screen} and (min-width: #{$large-lb})";
+
+// Orientation
+$landscape: "#{$screen} and (orientation: landscape)";
+$portrait: "#{$screen} and (orientation: portrait)";
